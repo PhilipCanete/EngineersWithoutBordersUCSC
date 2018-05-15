@@ -35,4 +35,5 @@ HOW TO ADD MORE SENSORS:
 6. If following multiData example, replace the number on line 13 with the number of values the sensor returns, minus one. Sensor returns 3 values > replace with 2 
 7. Go to main.php and add include '_sensorName.php'; to the top of the file.
 8 Uncomment the example case and be sure it is above the default case. Change "TABLE" to the table name you defined in phpadmin in step 3. Include single quotes.
-9. Download PrivateParts.ini from Team Drive > Technical team > Sensor node and place in same folder as project. Update Sensor Decoder spreadsheet in same folder with new SensorID you added.
+9. Download .PrivateParts.ini from Team Drive > Technical team > Sensor node and place in same folder as Main.php and updateDatabase.php.
+10. Update Sensor Decoder spreadsheet in same folder with new SensorID you added.
