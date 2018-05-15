@@ -4,9 +4,9 @@ Technical Team Code
 HOW IT WORKS:
 
 1. Arduino periodically gets a single sensor's data
-2. This string, current time, and SensorID is passed to the Fona 808 
+2. All the sensor's data is concatenated to a single string and seperated by SEMICOLONS. This, as well as current time, and SensorID is passed to the Fona 808 
 3. The which sends a GET request to our the backend website hosted at UCSC. 
-4. The main.php script takes the SensorID and sends it to the correct sensor config file to parse the $data
+4. The main.php script takes the SensorID and sends it to the correct sensor config file to parse the $data. 
 5. An array comprised of [Columns[], Values[]] is returned by the correct config file, and is sent to UpdateDatabase.php along with table name
 6. UpdateDatabase.php adds all Values[] to appropriate Columns[] in $table.
 
