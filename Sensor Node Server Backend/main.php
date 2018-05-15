@@ -1,5 +1,6 @@
 <?php
 include '_TemperatureHumidity.php';
+include '_Wind.php';
 include 'UpdateDatabase.php';
 
 //Get Sensor Data
@@ -19,6 +20,11 @@ try {
         //Temperature and Humidity Sensor
         case "TH":
             $temp = TH($data);
+            break;
+
+        //Wind
+        case "W":
+            $temp = W($data);
             break;
 
         default:
