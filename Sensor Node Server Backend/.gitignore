@@ -2,6 +2,7 @@
 
 .*
 !.gitignore
+.idea
 
 .PrivateParts.ini
 PrivateParts.ini
