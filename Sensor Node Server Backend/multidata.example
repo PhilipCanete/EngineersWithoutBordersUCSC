@@ -1,0 +1,28 @@
+<?php
+
+//REPLACE FUNCTION NAME BELOW
+function SHORTSENSORID($data, $table)
+{
+
+    //REPLACE COLUMN NAMES BELOW AS NECESSARY
+    //Set column names, parse and set values based on semicolon delimiter
+    $columns = array("COLUMN1", "COLUMN2");
+    $values = explode((';'), $data);
+
+    try {
+
+        //REPLACE # PLACEHOLDER BELOW WITH # OF COLUMNS - 1
+        //Currently error only throws if correct number semicolons do not exist
+        if (substr_count ($data,";") != # ) {
+            throw new Exception('Error with ' . basename(__FILE__, '.php') . ' data.');
+        } else {
+            return array($table, $columns, $values);
+        }
+    }
+
+        //Add error to database
+    catch (Exception $e) {
+        echo 'Caught exception: ',  $e->getMessage(), "\n\n";
+        return ['Error Log', ['Message'], [$e->getMessage()]];
+    }
+}
