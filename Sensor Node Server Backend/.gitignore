@@ -3,6 +3,8 @@
 .*
 !.gitignore
 .idea
+*.ini
+.*.ini
 
 .PrivateParts.ini
 PrivateParts.ini
