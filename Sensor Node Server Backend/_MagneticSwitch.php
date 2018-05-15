@@ -1,16 +1,16 @@
 <?php
 
-function W($data, $table)
+function SW($data, $table)
 {
 
     //Set olumn names, parse and set values based on semicolon delimiter
-    $columns = array("Wind Speed");
+    $columns = array("State");
 
 
     try {
         //Currently error only throws if no data was sent
         if (!$data) {
-            throw new Exception('Error with ' . basename(__FILE__, '.php') . 'data.');
+            throw new Exception('Error with ' . basename(__FILE__, '.php') . ' data.');
         } else {
             return array($table, $columns, [$data]);
         }

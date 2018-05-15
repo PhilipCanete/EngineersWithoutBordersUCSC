@@ -1,10 +1,9 @@
 <?php
 
-function TH($data)
+function TH($data, $table)
 {
 
-    //Set table and column names, parse and set values based on semicolon delimiter
-    $table = "Temperature and Humidity";
+    //Set column names, parse and set values based on semicolon delimiter
     $columns = array("Temperature", "Humidity");
     $values = explode((';'), $data);
 
@@ -12,7 +11,7 @@ function TH($data)
 
         //Currently error only throws if 2 semicolons do not exist
         if (substr_count ($data,";") != 1 ) {
-            throw new Exception('Error with temeperature and humidity data.');
+            throw new Exception('Error with ' . basename(__FILE__, '.php') . ' data.');
         } else {
             return array($table, $columns, $values);
         }

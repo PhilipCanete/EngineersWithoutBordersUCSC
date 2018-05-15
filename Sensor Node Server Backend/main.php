@@ -1,6 +1,7 @@
 <?php
 include '_TemperatureHumidity.php';
 include '_Wind.php';
+include '_MagneticSwitch.php';
 include 'UpdateDatabase.php';
 
 //Get Sensor Data
@@ -19,12 +20,16 @@ try {
 
         //Temperature and Humidity Sensor
         case "TH":
-            $temp = TH($data);
+            $temp = TH($data, "Temperature and Humidity");
             break;
 
         //Wind Sensor
         case "W":
-            $temp = W($data);
+            $temp = W($data, "Wind");
+            break;
+
+        case "SW";
+            $temp = SW($data, "Magnetic Switch");
             break;
 
         default:
