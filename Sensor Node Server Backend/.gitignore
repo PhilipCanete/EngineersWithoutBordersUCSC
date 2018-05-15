@@ -1,0 +1,13 @@
+# Passwords containing files and such
+
+.*
+!.gitignore
+/.idea
+*.ini
+.*.ini
+.idea/
+
+.PrivateParts.ini
+PrivateParts.ini
+test.php
+
