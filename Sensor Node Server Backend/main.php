@@ -22,7 +22,7 @@ try {
             $temp = TH($data);
             break;
 
-        //Wind
+        //Wind Sensor
         case "W":
             $temp = W($data);
             break;
