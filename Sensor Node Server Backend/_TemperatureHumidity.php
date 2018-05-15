@@ -18,9 +18,9 @@ function TH($data)
         }
     }
 
-    //Add error to database
+        //Add error to database
     catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n\n";
         return ['Error Log', ['Message'], [$e->getMessage()]];
-}
+    }
 }
