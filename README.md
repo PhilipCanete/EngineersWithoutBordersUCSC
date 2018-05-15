@@ -1,2 +1,0 @@
-# EngineersWithoutBordersUCSC
-Technical Team Code
