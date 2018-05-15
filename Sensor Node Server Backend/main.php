@@ -32,6 +32,12 @@ try {
             $temp = SW($data, "Magnetic Switch");
             break;
 
+        /* Delete comments and replace all caps to add new sensor
+        case "SHORTSENSORID";
+            $temp = SHORTSENSORID($data, "TABLE NAME GOES HERE);
+            break;
+        */
+
         default:
             echo "Error parsing sensor ID";
     }
