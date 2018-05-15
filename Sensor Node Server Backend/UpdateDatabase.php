@@ -5,7 +5,7 @@
 function updateDatabase($t)
 {
     //Load ini data
-    $ini = parse_ini_file("PrivateParts.ini");
+    $ini = parse_ini_file(".PrivateParts.ini");
 
     // Create connection
     $conn = new mysqli($ini['servername'], $ini['username'], $ini['password'], $ini['dbname']);

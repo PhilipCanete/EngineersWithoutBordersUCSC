@@ -1,7 +1,7 @@
 <?php
-include '_TemperatureHumidity.php';
-include '_Wind.php';
-include '_MagneticSwitch.php';
+//Include all files
+foreach (glob('Sensor Configs/*.php') as $file)
+    include( $file );
 include 'UpdateDatabase.php';
 
 //Get Sensor Data
@@ -39,12 +39,15 @@ try {
         */
 
         default:
-            echo "Error parsing sensor ID";
+            echo "Error parsing sensor ID " . PHP_EOL ;
+            $temp = ['Error Log', ['Message'], ["Error parsing sensor ID"]];
+
     }
 }
 
 catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
+    $temp = ['Error Log', ['Message'], [$e->getMessage()]];
 }
 
 updateDatabase($temp);
