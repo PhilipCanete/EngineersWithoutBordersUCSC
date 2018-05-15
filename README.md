@@ -26,7 +26,7 @@ HOW TO ADD MORE SENSORS:
 
 
 0. If the same exact sensor config file already exists, just add another case to the main.php file. Reference the same function, but use a different $table
-1.Use _SensorName.php naming convention and create new sensor file 
+1.Use _SensorName.php naming convention and create new sensor file in Sensor Configs folder
 2a. If sensor only returns one piece of data, copy/paste the singleData.example file 
 2b. If sensor returns multiple pieces of data, copy/paste multiData.example file 
 3. Add new table on phpmyadmin under arboretum_data. Required columns are Time Recieved and Time Sent, then add another column(s) for the new sensor data. 3a. Set all data types to TEXT 
